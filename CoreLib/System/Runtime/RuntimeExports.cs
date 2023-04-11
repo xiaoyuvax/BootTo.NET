@@ -8,7 +8,11 @@
 //
 
 using Internal.Runtime;
+#if BFLAT
+using System.Runtime.CompilerServices;
+#else
 using Internal.Runtime.CompilerServices;
+#endif 
 using System.Runtime.InteropServices;
 
 #if TARGET_64BIT

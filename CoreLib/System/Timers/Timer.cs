@@ -23,7 +23,7 @@
                 Elapsed.Invoke(this, null);
             });
 
-            gBS->CreateEvent(EVT_TIMER | EVT_NOTIFY_SIGNAL, TPL_CALLBACK, (delegate* unmanaged<EFI_EVENT,void*,void>)_action.m_functionPointer, null, (EFI_EVENT*)_evt);
+            gBS->CreateEvent((uint)(EVT_TIMER | EVT_NOTIFY_SIGNAL), TPL_CALLBACK, (delegate* unmanaged<EFI_EVENT,void*,void>)_action.m_functionPointer, null, (EFI_EVENT*)_evt);
             gBS->SetTimer(_evt, EFI_TIMER_DELAY.TimerPeriodic, this.Interval * 10000);
         }
 

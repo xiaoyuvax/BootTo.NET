@@ -1,4 +1,8 @@
-﻿using Internal.Runtime.CompilerServices;
+﻿#if BFLAT
+using System.Runtime.CompilerServices;
+#else
+using Internal.Runtime.CompilerServices;
+#endif 
 using System;
 using System.Runtime;
 
